@@ -291,8 +291,17 @@ Usage: gobgp-exporter [arguments]
         version information
   -web.listen-address string
         Address to listen on for web interface and telemetry. (default ":9474")
+  -web.mtls
+        Whether to enable mTLS for the prometheus endpoint.
+  -web.mtls-ca string
+        Optional path to PEM file with CA certificates to be trusted for mTLS '/metrics' access. (default "/a/golinject/etc/ssl/gecko-gobgpexporter-prometheus-chain.pem")
+  -web.mtls-server-cert string
+        Optional path to PEM file with server certificate to be used for server authentication. (default "/a/golinject/etc/ssl/gecko-gobgpexporter-prometheus-cert.pem")
+  -web.mtls-server-key string
+        Optional path to PEM file with server key to be used for server authentication. (default "/a/golinject/etc/ssl/gecko-gobgpexporter-prometheus-key.pem")
   -web.telemetry-path string
         Path under which to expose metrics. (default "/metrics")
+
 
 Documentation: https://github.com/greenpau/gobgp_exporter/
 ```
